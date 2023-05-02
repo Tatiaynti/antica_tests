@@ -1,0 +1,24 @@
+{
+  "name": "antica_tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tatiaynti/antica_tests.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tatiaynti/antica_tests/issues"
+  },
+  "homepage": "https://github.com/Tatiaynti/antica_tests#readme",
+  "devDependencies": {
+    "cypress": "^12.11.0",
+    "eslint": "^8.39.0",
+    "eslint-plugin-cypress": "^2.13.3"
+  }
+}
