@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:cy": "cypress open"
   },
   "repository": {
     "type": "git",
@@ -20,5 +22,8 @@
     "cypress": "^12.11.0",
     "eslint": "^8.39.0",
     "eslint-plugin-cypress": "^2.13.3"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^7.6.0"
   }
 }
