@@ -2,7 +2,6 @@
 /* eslint-disable cypress/no-unnecessary-waiting */
 /* eslint-disable cypress/unsafe-to-chain-command */
 import { faker } from '@faker-js/faker'
-import { getRandomInt } from './utils.js'
 Cypress.config('pageLoadTimeout', 100000)
 
 Cypress.on('uncaught:exception', (err, runnable) => {
@@ -18,7 +17,7 @@ Cypress.Commands.add('clickOutside', function() {
 describe('Элементы интерфейса', () => {
   beforeEach(() => {
     cy.clearCookies()
-    cy.viewport(1920, 1080)
+    cy.viewport(1536, 864)
     cy.visit('https://www.antica.su/')
   })
 
@@ -87,7 +86,7 @@ describe('Элементы интерфейса', () => {
 describe('Избранное', () => {
   beforeEach(() => {
     cy.clearCookies()
-    cy.viewport(1920, 1080)
+    cy.viewport(1536, 864)
     cy.visit('https://www.antica.su/')
   })
 
@@ -137,7 +136,7 @@ describe('Избранное', () => {
 describe('Корзина', () => {
   beforeEach(() => {
     cy.clearCookies()
-    cy.viewport(1920, 1080)
+    cy.viewport(1536, 864)
     cy.visit('https://www.antica.su/')
   })
 
@@ -381,7 +380,7 @@ describe('Корзина', () => {
 describe('Листинг', () => {
   beforeEach(() => {
     cy.clearCookies()
-    cy.viewport(1920, 1080)
+    cy.viewport(1536, 864)
     cy.visit('https://www.antica.su/')
   })
 
@@ -621,7 +620,7 @@ describe('Листинг', () => {
 describe('Страница фабрики', () => {
   beforeEach(() => {
     cy.clearCookies()
-    cy.viewport(1920, 1080)
+    cy.viewport(1536, 864)
     cy.visit('https://www.antica.su/')
   })
 
@@ -634,7 +633,7 @@ describe('Страница фабрики', () => {
 describe('Страница коллекции', () => {
   beforeEach(() => {
     cy.clearCookies()
-    cy.viewport(1920, 1080)
+    cy.viewport(1536, 864)
     cy.visit('https://www.antica.su/')
   })
 
@@ -659,7 +658,7 @@ describe('Страница коллекции', () => {
 describe('Страница карточки товара', () => {
   beforeEach(() => {
     cy.clearCookies()
-    cy.viewport(1920, 1080)
+    cy.viewport(1536, 864)
     cy.visit('https://www.antica.su/')
   })
 
@@ -720,7 +719,7 @@ describe('Страница карточки товара', () => {
           var reg = new RegExp("[ ]+","g")
           val = val.replace(reg,"")
 
-         cy.get('.card__order__result_sum > .val').should('contain', Math.floor(price*Number(Math.round(val)))) 
+         cy.get('.card__order__result_sum > .val').should('contain', Math.floor(price*Number(Math.round(val.slice(0,2))))) 
         })
     })
   })
